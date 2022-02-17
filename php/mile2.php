@@ -1,6 +1,3 @@
-<?php 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,16 +23,35 @@
         alt="spotify logo"
         class="logo-spotify"
       />
+
+      <div>
+        <select v-model='selectedValue' name="genres" id="genre-select">
+          <option disabled value="Selezione">Seleziona un genere</option>
+          <option selected>Tutti</option>
+          <option v-for='(genre, index) in genres'>{{genre}}</option>
+        </select>
+      </div>
     </header>
 
     <div class="container">
-      <div class="card-box" v-for="discInfo in discArray">
-        <img class="poster-img" :src='discInfo.poster'>
+      <div v-for="discInfo in discArray">
+        <div class="card-box" v-if='selectedValue == "Tutti"' v-show='show'>
+          <img class="poster-img" :src='discInfo.poster'>
 
-        <h2>{{discInfo.title.toUpperCase()}}</h2>
+          <h2>{{discInfo.title.toUpperCase()}}</h2>
 
-        <div class="name">{{discInfo.author}}</div>
-        <div class="date">{{discInfo.year}}</div>
+          <div class="name">{{discInfo.author}}</div>
+          <div class="date">{{discInfo.year}}</div>
+        </div>
+
+        <div class="card-box" v-if='selectedValue == discInfo.genre'>
+          <img class="poster-img" :src='discInfo.poster'>
+
+          <h2>{{discInfo.title.toUpperCase()}}</h2>
+
+          <div class="name">{{discInfo.author}}</div>
+          <div class="date">{{discInfo.year}}</div>
+        </div>
       </div>
     </div>
   </div>
