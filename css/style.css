@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e2d3b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container */
+.container {
+  width: 1200px;
+  margin: 70px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* -------------- */
+
+/* Header */
+header {
+  background-color: #2e3a46;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-spotify {
+  height: 45px;
+  background-color: #191716;
+  border-radius: 50%;
+}
+/* ------ */
+
+/* Card-Box */
+.card-box {
+  height: 365px;
+  width: 200px;
+  margin: 10px 20px;
+  background-color: #2e3a46;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.poster-img {
+  width: 160px;
+  margin: 20px 0;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  width: 160px;
+  font-size: 22px;
+  padding-bottom: 25px;
+}
+
+.name {
+  font-size: 19px;
+  padding-bottom: 4px;
+}
+
+.name,
+.date {
+  color: #808080;
+}
+
+/* -------- */
