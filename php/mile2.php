@@ -32,7 +32,7 @@
       <div class="card-box" v-for="discInfo in discArray">
         <img class="poster-img" :src='discInfo.poster'>
 
-        <h2>{{discInfo.title}}</h2>
+        <h2>{{discInfo.title.toUpperCase()}}</h2>
 
         <div class="name">{{discInfo.author}}</div>
         <div class="date">{{discInfo.year}}</div>
