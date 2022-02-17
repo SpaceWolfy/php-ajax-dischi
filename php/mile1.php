@@ -32,7 +32,7 @@ include __DIR__ . '/db/database.php';
       <div class="card-box">
         <img class="poster-img" src="<?php echo $disc['poster'] ?>" alt="poster" />
 
-        <h2><?php echo $disc['title'] ?></h2>
+        <h2><?php echo strtoupper($disc['title']) ?></h2>
 
         <div class="name"><?php echo $disc['author'] ?></div>
         <div class="date"><?php echo $disc['year'] ?></div>
